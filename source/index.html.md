@@ -15,9 +15,9 @@ search: true
 
 # 概述
 
-crawlerclub API提供如PM2.5数据查询、全球手机号码运营商归属地查询、交通信息查询等数据API接口以及提供如全语种网页文章正文抽取、文章关键词抽取、自然语言解析等基础技术API接口。
+crawler.club提供如PM2.5数据查询、全球手机号码运营商归属地查询、交通信息查询等数据API接口以及提供如全语种网页文章正文抽取、文章关键词抽取、自然语言解析等基础技术API接口。
 
-crawlerclub服务后台需要通过使用Access Key / Secret Key加密的方法来验证某个请求的发送者身份。Access Key（AK）用于标示用户，Secret Key（SK）是用户用于加密认证字符串和crawlerclub服务用来验证认证字符串的密钥，其中SK必须保密，只有用户和crawlerclub知道。
+crawler.club服务后台需要通过使用Access Key / Secret Key加密的方法来验证某个请求的发送者身份。Access Key（AK）用于标示用户，Secret Key（SK）是用户用于加密认证字符串和crawler.club服务用来验证认证字符串的密钥，其中SK必须保密，只有用户和crawler.club知道。
 
 SDK初始化，需要用户先申请到属于自己的AK和SK。
 
@@ -92,84 +92,6 @@ func main() {
     "update_time":"2018-05-12T09:00:00+08:00",
     "stations":[
       {
-        "aqi":"253",
-        "co":"2.5",
-        "no2":"47",
-        "o3":"20",
-        "o3_8h":"9",
-        "pm10":"218",
-        "pm2_5":"203",
-        "position_name":"万寿西宫",
-        "primary_pollutant":"细颗粒物(PM2.5)",
-        "quality":"重度污染",
-        "so2":"7"
-      },
-      {
-        "aqi":"232",
-        "co":"1.9",
-        "no2":"46",
-        "o3":"60",
-        "o3_8h":"34",
-        "pm10":"_",
-        "pm2_5":"182",
-        "position_name":"定陵",
-        "primary_pollutant":"细颗粒物(PM2.5)",
-        "quality":"重度污染",
-        "so2":"4"
-      },
-      {
-        "aqi":"252",
-        "co":"2.3",
-        "no2":"54",
-        "o3":"18",
-        "o3_8h":"7",
-        "pm10":"_",
-        "pm2_5":"202",
-        "position_name":"东四",
-        "primary_pollutant":"细颗粒物(PM2.5)",
-        "quality":"重度污染",
-        "so2":"5"
-      },
-      {
-        "aqi":"247",
-        "co":"2.5",
-        "no2":"67",
-        "o3":"10",
-        "o3_8h":"5",
-        "pm10":"_",
-        "pm2_5":"197",
-        "position_name":"天坛",
-        "primary_pollutant":"细颗粒物(PM2.5)",
-        "quality":"重度污染",
-        "so2":"5"
-      },
-      {
-        "aqi":"242",
-        "co":"2.3",
-        "no2":"54",
-        "o3":"12",
-        "o3_8h":"4",
-        "pm10":"_",
-        "pm2_5":"192",
-        "position_name":"农展馆",
-        "primary_pollutant":"细颗粒物(PM2.5)",
-        "quality":"重度污染",
-        "so2":"3"
-      },
-      {
-        "aqi":"272",
-        "co":"2.4",
-        "no2":"63",
-        "o3":"17",
-        "o3_8h":"8",
-        "pm10":"_",
-        "pm2_5":"222",
-        "position_name":"官园",
-        "primary_pollutant":"细颗粒物(PM2.5)",
-        "quality":"重度污染",
-        "so2":"6"
-      },
-      {
         "aqi":"269",
         "co":"2.3",
         "no2":"55",
@@ -183,45 +105,6 @@ func main() {
         "so2":"5"
       },
       {
-        "aqi":"226",
-        "co":"2.2",
-        "no2":"34",
-        "o3":"44",
-        "o3_8h":"29",
-        "pm10":"_",
-        "pm2_5":"176",
-        "position_name":"顺义新城",
-        "primary_pollutant":"细颗粒物(PM2.5)",
-        "quality":"重度污染",
-        "so2":"7"
-      },
-      {
-        "aqi":"216",
-        "co":"2.0",
-        "no2":"31",
-        "o3":"43",
-        "o3_8h":"40",
-        "pm10":"_",
-        "pm2_5":"166",
-        "position_name":"怀柔镇",
-        "primary_pollutant":"细颗粒物(PM2.5)",
-        "quality":"重度污染",
-        "so2":"2"
-      },
-      {
-        "aqi":"_",
-        "co":"1.9",
-        "no2":"39",
-        "o3":"35",
-        "o3_8h":"34",
-        "pm10":"_",
-        "pm2_5":"196",
-        "position_name":"昌平镇",
-        "primary_pollutant":"_",
-        "quality":"",
-        "so2":"3"
-      },
-      {
         "aqi":"260",
         "co":"2.3",
         "no2":"59",
@@ -233,19 +116,6 @@ func main() {
         "primary_pollutant":"细颗粒物(PM2.5)",
         "quality":"重度污染",
         "so2":"2"
-      },
-      {
-        "aqi":"268",
-        "co":"2.3",
-        "no2":"57",
-        "o3":"35",
-        "o3_8h":"10",
-        "pm10":"_",
-        "pm2_5":"218",
-        "position_name":"古城",
-        "primary_pollutant":"细颗粒物(PM2.5)",
-        "quality":"重度污染",
-        "so2":"3"
       }
     ]
   }
@@ -293,9 +163,19 @@ status | 说明
 
 数值单位：`μg/m3`（`CO`为`mg/m3`）
 
-position_name|aqi|quality|primary_pollutant|pm2_5|pm10|co|no2|o3|o3_8h|so2
----|---|---|---|---|---|---|---|---|---|---
-监测点|`AQI`|空气质量<br>指数类别|首要污染物|`PM2.5`<br>细颗粒物|`PM10`<br>可吸入颗粒物|`CO`<br>一氧化碳|`NO2`<br>二氧化氮|`O3`<br>臭氧1小时平均|`O3`<br>臭氧8小时平均|`SO2`<br>二氧化硫
+字段 | 说明
+--- | ---
+position_name|监测点
+aqi|`AQI`
+quality|空气质量/指数类别
+primary_pollutant|首要污染物
+pm2_5|`PM2.5`/细颗粒物
+pm10|`PM10`/可吸入颗粒物
+co|`CO`/一氧化碳
+no2|`NO2`/二氧化氮
+o3|`O3`/臭氧1小时平均
+o3_8h|`O3`/臭氧8小时平均
+so2|`SO2`/二氧化硫
 
 # 全球电话运营商归属地查询☎️
 
@@ -394,10 +274,3 @@ func main() {
 --------- | -------
 `number` | `字符串`，要查询的电话号码
 `country` | `可选`，`字符串`，国家码，默认为`CN`中国🇨🇳
-
-### 状态码说明
-
-status | 说明
---------- | -------
-`ok` | 查找成功
-`error` | 失败，此时`message`保存错误信息

@@ -235,22 +235,25 @@ func main() {
 
 ```json
 {
-  "country_code":86,
-  "national_number":13800138000,
-  "is_valid_number":true,
-  "number_type":"MOBILE",
-  "e164":"+8613800138000",
-  "region_code":"CN",
-  "location":{
-    "en":"Beijing",
-    "zh":"北京市"
-  },
-  "time_zones":[
-    "Asia/Shanghai"
-  ],
-  "carrier":{
-    "en":"China Mobile",
-    "zh":"中国移动"
+  "status":"ok",
+  "message":{
+    "country_code":86,
+    "national_number":13800138000,
+    "is_valid_number":true,
+    "number_type":"MOBILE",
+    "e164":"+8613800138000",
+    "region_code":"CN",
+    "location":{
+      "en":"Beijing",
+      "zh":"北京市"
+    },
+    "time_zones":[
+      "Asia/Shanghai"
+    ],
+    "carrier":{
+      "en":"China Mobile",
+      "zh":"中国移动"
+    }
   }
 }
 ```
@@ -259,7 +262,7 @@ func main() {
 
 ```json
 {
-  "status":"error",
+  "status":"fail",
   "message":"The phone number supplied is not a number."
 }
 ```
@@ -274,3 +277,24 @@ func main() {
 --------- | -------
 `number` | `字符串`，要查询的电话号码
 `country` | `可选`，`字符串`，国家码，默认为`CN`中国🇨🇳
+
+### 状态码说明
+
+status | 说明
+--------- | -------
+`ok` | 查找成功
+`fail` | 失败，此时`message`保存错误信息
+
+### 电话号码信息说明
+
+字段 | 说明
+--- | ---
+country_code|国家代码，比如中国为`86`
+national_number|国内呼叫号码
+is_valid_number|是否合法电话号码
+number_type|号码类型，`MOBILE`、`FIXED_LINE`
+e164|`e164`格式化号码
+region_code|区域代码，比如中国为`CN`
+location|归属地，*多语种*
+time_zones|时区
+carrier|运营商，*多语种*

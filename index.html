@@ -252,6 +252,12 @@
                   <li>
                     <a href="#1f9ac54b15-2" class="toc-h2 toc-link" data-title="">请求参数</a>
                   </li>
+                  <li>
+                    <a href="#9ea07c6cb3-2" class="toc-h2 toc-link" data-title="">状态码说明</a>
+                  </li>
+                  <li>
+                    <a href="#f5924a2658" class="toc-h2 toc-link" data-title="">电话号码信息说明</a>
+                  </li>
               </ul>
           </li>
       </div>
@@ -536,22 +542,25 @@
 <p>正确返回数据应答样例</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"country_code"</span><span class="p">:</span><span class="mi">86</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"national_number"</span><span class="p">:</span><span class="mi">13800138000</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"is_valid_number"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"number_type"</span><span class="p">:</span><span class="s2">"MOBILE"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"e164"</span><span class="p">:</span><span class="s2">"+8613800138000"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"region_code"</span><span class="p">:</span><span class="s2">"CN"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"location"</span><span class="p">:{</span><span class="w">
-    </span><span class="s2">"en"</span><span class="p">:</span><span class="s2">"Beijing"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"zh"</span><span class="p">:</span><span class="s2">"北京市"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"time_zones"</span><span class="p">:[</span><span class="w">
-    </span><span class="s2">"Asia/Shanghai"</span><span class="w">
-  </span><span class="p">],</span><span class="w">
-  </span><span class="s2">"carrier"</span><span class="p">:{</span><span class="w">
-    </span><span class="s2">"en"</span><span class="p">:</span><span class="s2">"China Mobile"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"zh"</span><span class="p">:</span><span class="s2">"中国移动"</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:{</span><span class="w">
+    </span><span class="s2">"country_code"</span><span class="p">:</span><span class="mi">86</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"national_number"</span><span class="p">:</span><span class="mi">13800138000</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"is_valid_number"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"number_type"</span><span class="p">:</span><span class="s2">"MOBILE"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"e164"</span><span class="p">:</span><span class="s2">"+8613800138000"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"region_code"</span><span class="p">:</span><span class="s2">"CN"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"location"</span><span class="p">:{</span><span class="w">
+      </span><span class="s2">"en"</span><span class="p">:</span><span class="s2">"Beijing"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"zh"</span><span class="p">:</span><span class="s2">"北京市"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"time_zones"</span><span class="p">:[</span><span class="w">
+      </span><span class="s2">"Asia/Shanghai"</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"carrier"</span><span class="p">:{</span><span class="w">
+      </span><span class="s2">"en"</span><span class="p">:</span><span class="s2">"China Mobile"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"zh"</span><span class="p">:</span><span class="s2">"中国移动"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
@@ -559,7 +568,7 @@
 <p>请求错误应答样例</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"status"</span><span class="p">:</span><span class="s2">"error"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="s2">"fail"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"message"</span><span class="p">:</span><span class="s2">"The phone number supplied is not a number."</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-2'>HTTP请求</h3>
@@ -578,6 +587,66 @@
 <tr>
 <td><code>country</code></td>
 <td><code>可选</code>，<code>字符串</code>，国家码，默认为<code>CN</code>中国🇨🇳</td>
+</tr>
+</tbody></table>
+<h3 id='9ea07c6cb3-2'>状态码说明</h3>
+<table><thead>
+<tr>
+<th>status</th>
+<th>说明</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>ok</code></td>
+<td>查找成功</td>
+</tr>
+<tr>
+<td><code>fail</code></td>
+<td>失败，此时<code>message</code>保存错误信息</td>
+</tr>
+</tbody></table>
+<h3 id='f5924a2658'>电话号码信息说明</h3>
+<table><thead>
+<tr>
+<th>字段</th>
+<th>说明</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>country_code</td>
+<td>国家代码，比如中国为<code>86</code></td>
+</tr>
+<tr>
+<td>national_number</td>
+<td>国内呼叫号码</td>
+</tr>
+<tr>
+<td>is_valid_number</td>
+<td>是否合法电话号码</td>
+</tr>
+<tr>
+<td>number_type</td>
+<td>号码类型，<code>MOBILE</code>、<code>FIXED_LINE</code></td>
+</tr>
+<tr>
+<td>e164</td>
+<td><code>e164</code>格式化号码</td>
+</tr>
+<tr>
+<td>region_code</td>
+<td>区域代码，比如中国为<code>CN</code></td>
+</tr>
+<tr>
+<td>location</td>
+<td>归属地，<em>多语种</em></td>
+</tr>
+<tr>
+<td>time_zones</td>
+<td>时区</td>
+</tr>
+<tr>
+<td>carrier</td>
+<td>运营商，<em>多语种</em></td>
 </tr>
 </tbody></table>
 

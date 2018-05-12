@@ -252,9 +252,6 @@
                   <li>
                     <a href="#1f9ac54b15-2" class="toc-h2 toc-link" data-title="">请求参数</a>
                   </li>
-                  <li>
-                    <a href="#9ea07c6cb3-2" class="toc-h2 toc-link" data-title="">状态码说明</a>
-                  </li>
               </ul>
           </li>
       </div>
@@ -267,9 +264,9 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='153042ed9e'>概述</h1>
-<p>crawlerclub API提供如PM2.5数据查询、全球手机号码运营商归属地查询、交通信息查询等数据API接口以及提供如全语种网页文章正文抽取、文章关键词抽取、自然语言解析等基础技术API接口。</p>
+<p>crawler.club提供如PM2.5数据查询、全球手机号码运营商归属地查询、交通信息查询等数据API接口以及提供如全语种网页文章正文抽取、文章关键词抽取、自然语言解析等基础技术API接口。</p>
 
-<p>crawlerclub服务后台需要通过使用Access Key / Secret Key加密的方法来验证某个请求的发送者身份。Access Key（AK）用于标示用户，Secret Key（SK）是用户用于加密认证字符串和crawlerclub服务用来验证认证字符串的密钥，其中SK必须保密，只有用户和crawlerclub知道。</p>
+<p>crawler.club服务后台需要通过使用Access Key / Secret Key加密的方法来验证某个请求的发送者身份。Access Key（AK）用于标示用户，Secret Key（SK）是用户用于加密认证字符串和crawler.club服务用来验证认证字符串的密钥，其中SK必须保密，只有用户和crawler.club知道。</p>
 
 <p>SDK初始化，需要用户先申请到属于自己的AK和SK。</p>
 
@@ -337,84 +334,6 @@
     </span><span class="s2">"update_time"</span><span class="p">:</span><span class="s2">"2018-05-12T09:00:00+08:00"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"stations"</span><span class="p">:[</span><span class="w">
       </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"aqi"</span><span class="p">:</span><span class="s2">"253"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"co"</span><span class="p">:</span><span class="s2">"2.5"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"no2"</span><span class="p">:</span><span class="s2">"47"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"o3"</span><span class="p">:</span><span class="s2">"20"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"o3_8h"</span><span class="p">:</span><span class="s2">"9"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"pm10"</span><span class="p">:</span><span class="s2">"218"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"pm2_5"</span><span class="p">:</span><span class="s2">"203"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"position_name"</span><span class="p">:</span><span class="s2">"万寿西宫"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"primary_pollutant"</span><span class="p">:</span><span class="s2">"细颗粒物(PM2.5)"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"quality"</span><span class="p">:</span><span class="s2">"重度污染"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"so2"</span><span class="p">:</span><span class="s2">"7"</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"aqi"</span><span class="p">:</span><span class="s2">"232"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"co"</span><span class="p">:</span><span class="s2">"1.9"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"no2"</span><span class="p">:</span><span class="s2">"46"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"o3"</span><span class="p">:</span><span class="s2">"60"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"o3_8h"</span><span class="p">:</span><span class="s2">"34"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"pm10"</span><span class="p">:</span><span class="s2">"_"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"pm2_5"</span><span class="p">:</span><span class="s2">"182"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"position_name"</span><span class="p">:</span><span class="s2">"定陵"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"primary_pollutant"</span><span class="p">:</span><span class="s2">"细颗粒物(PM2.5)"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"quality"</span><span class="p">:</span><span class="s2">"重度污染"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"so2"</span><span class="p">:</span><span class="s2">"4"</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"aqi"</span><span class="p">:</span><span class="s2">"252"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"co"</span><span class="p">:</span><span class="s2">"2.3"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"no2"</span><span class="p">:</span><span class="s2">"54"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"o3"</span><span class="p">:</span><span class="s2">"18"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"o3_8h"</span><span class="p">:</span><span class="s2">"7"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"pm10"</span><span class="p">:</span><span class="s2">"_"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"pm2_5"</span><span class="p">:</span><span class="s2">"202"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"position_name"</span><span class="p">:</span><span class="s2">"东四"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"primary_pollutant"</span><span class="p">:</span><span class="s2">"细颗粒物(PM2.5)"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"quality"</span><span class="p">:</span><span class="s2">"重度污染"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"so2"</span><span class="p">:</span><span class="s2">"5"</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"aqi"</span><span class="p">:</span><span class="s2">"247"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"co"</span><span class="p">:</span><span class="s2">"2.5"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"no2"</span><span class="p">:</span><span class="s2">"67"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"o3"</span><span class="p">:</span><span class="s2">"10"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"o3_8h"</span><span class="p">:</span><span class="s2">"5"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"pm10"</span><span class="p">:</span><span class="s2">"_"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"pm2_5"</span><span class="p">:</span><span class="s2">"197"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"position_name"</span><span class="p">:</span><span class="s2">"天坛"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"primary_pollutant"</span><span class="p">:</span><span class="s2">"细颗粒物(PM2.5)"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"quality"</span><span class="p">:</span><span class="s2">"重度污染"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"so2"</span><span class="p">:</span><span class="s2">"5"</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"aqi"</span><span class="p">:</span><span class="s2">"242"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"co"</span><span class="p">:</span><span class="s2">"2.3"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"no2"</span><span class="p">:</span><span class="s2">"54"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"o3"</span><span class="p">:</span><span class="s2">"12"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"o3_8h"</span><span class="p">:</span><span class="s2">"4"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"pm10"</span><span class="p">:</span><span class="s2">"_"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"pm2_5"</span><span class="p">:</span><span class="s2">"192"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"position_name"</span><span class="p">:</span><span class="s2">"农展馆"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"primary_pollutant"</span><span class="p">:</span><span class="s2">"细颗粒物(PM2.5)"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"quality"</span><span class="p">:</span><span class="s2">"重度污染"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"so2"</span><span class="p">:</span><span class="s2">"3"</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"aqi"</span><span class="p">:</span><span class="s2">"272"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"co"</span><span class="p">:</span><span class="s2">"2.4"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"no2"</span><span class="p">:</span><span class="s2">"63"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"o3"</span><span class="p">:</span><span class="s2">"17"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"o3_8h"</span><span class="p">:</span><span class="s2">"8"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"pm10"</span><span class="p">:</span><span class="s2">"_"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"pm2_5"</span><span class="p">:</span><span class="s2">"222"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"position_name"</span><span class="p">:</span><span class="s2">"官园"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"primary_pollutant"</span><span class="p">:</span><span class="s2">"细颗粒物(PM2.5)"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"quality"</span><span class="p">:</span><span class="s2">"重度污染"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"so2"</span><span class="p">:</span><span class="s2">"6"</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="p">{</span><span class="w">
         </span><span class="s2">"aqi"</span><span class="p">:</span><span class="s2">"269"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"co"</span><span class="p">:</span><span class="s2">"2.3"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"no2"</span><span class="p">:</span><span class="s2">"55"</span><span class="p">,</span><span class="w">
@@ -428,45 +347,6 @@
         </span><span class="s2">"so2"</span><span class="p">:</span><span class="s2">"5"</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"aqi"</span><span class="p">:</span><span class="s2">"226"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"co"</span><span class="p">:</span><span class="s2">"2.2"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"no2"</span><span class="p">:</span><span class="s2">"34"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"o3"</span><span class="p">:</span><span class="s2">"44"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"o3_8h"</span><span class="p">:</span><span class="s2">"29"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"pm10"</span><span class="p">:</span><span class="s2">"_"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"pm2_5"</span><span class="p">:</span><span class="s2">"176"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"position_name"</span><span class="p">:</span><span class="s2">"顺义新城"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"primary_pollutant"</span><span class="p">:</span><span class="s2">"细颗粒物(PM2.5)"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"quality"</span><span class="p">:</span><span class="s2">"重度污染"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"so2"</span><span class="p">:</span><span class="s2">"7"</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"aqi"</span><span class="p">:</span><span class="s2">"216"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"co"</span><span class="p">:</span><span class="s2">"2.0"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"no2"</span><span class="p">:</span><span class="s2">"31"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"o3"</span><span class="p">:</span><span class="s2">"43"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"o3_8h"</span><span class="p">:</span><span class="s2">"40"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"pm10"</span><span class="p">:</span><span class="s2">"_"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"pm2_5"</span><span class="p">:</span><span class="s2">"166"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"position_name"</span><span class="p">:</span><span class="s2">"怀柔镇"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"primary_pollutant"</span><span class="p">:</span><span class="s2">"细颗粒物(PM2.5)"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"quality"</span><span class="p">:</span><span class="s2">"重度污染"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"so2"</span><span class="p">:</span><span class="s2">"2"</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"aqi"</span><span class="p">:</span><span class="s2">"_"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"co"</span><span class="p">:</span><span class="s2">"1.9"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"no2"</span><span class="p">:</span><span class="s2">"39"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"o3"</span><span class="p">:</span><span class="s2">"35"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"o3_8h"</span><span class="p">:</span><span class="s2">"34"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"pm10"</span><span class="p">:</span><span class="s2">"_"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"pm2_5"</span><span class="p">:</span><span class="s2">"196"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"position_name"</span><span class="p">:</span><span class="s2">"昌平镇"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"primary_pollutant"</span><span class="p">:</span><span class="s2">"_"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"quality"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"so2"</span><span class="p">:</span><span class="s2">"3"</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="p">{</span><span class="w">
         </span><span class="s2">"aqi"</span><span class="p">:</span><span class="s2">"260"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"co"</span><span class="p">:</span><span class="s2">"2.3"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"no2"</span><span class="p">:</span><span class="s2">"59"</span><span class="p">,</span><span class="w">
@@ -478,19 +358,6 @@
         </span><span class="s2">"primary_pollutant"</span><span class="p">:</span><span class="s2">"细颗粒物(PM2.5)"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"quality"</span><span class="p">:</span><span class="s2">"重度污染"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"so2"</span><span class="p">:</span><span class="s2">"2"</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"aqi"</span><span class="p">:</span><span class="s2">"268"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"co"</span><span class="p">:</span><span class="s2">"2.3"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"no2"</span><span class="p">:</span><span class="s2">"57"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"o3"</span><span class="p">:</span><span class="s2">"35"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"o3_8h"</span><span class="p">:</span><span class="s2">"10"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"pm10"</span><span class="p">:</span><span class="s2">"_"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"pm2_5"</span><span class="p">:</span><span class="s2">"218"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"position_name"</span><span class="p">:</span><span class="s2">"古城"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"primary_pollutant"</span><span class="p">:</span><span class="s2">"细颗粒物(PM2.5)"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"quality"</span><span class="p">:</span><span class="s2">"重度污染"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"so2"</span><span class="p">:</span><span class="s2">"3"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
   </span><span class="p">}</span><span class="w">
@@ -570,31 +437,53 @@
 
 <table><thead>
 <tr>
-<th>position_name</th>
-<th>aqi</th>
-<th>quality</th>
-<th>primary_pollutant</th>
-<th>pm2_5</th>
-<th>pm10</th>
-<th>co</th>
-<th>no2</th>
-<th>o3</th>
-<th>o3_8h</th>
-<th>so2</th>
+<th>字段</th>
+<th>说明</th>
 </tr>
 </thead><tbody>
 <tr>
+<td>position_name</td>
 <td>监测点</td>
+</tr>
+<tr>
+<td>aqi</td>
 <td><code>AQI</code></td>
-<td>空气质量<br>指数类别</td>
+</tr>
+<tr>
+<td>quality</td>
+<td>空气质量/指数类别</td>
+</tr>
+<tr>
+<td>primary_pollutant</td>
 <td>首要污染物</td>
-<td><code>PM2.5</code><br>细颗粒物</td>
-<td><code>PM10</code><br>可吸入颗粒物</td>
-<td><code>CO</code><br>一氧化碳</td>
-<td><code>NO2</code><br>二氧化氮</td>
-<td><code>O3</code><br>臭氧1小时平均</td>
-<td><code>O3</code><br>臭氧8小时平均</td>
-<td><code>SO2</code><br>二氧化硫</td>
+</tr>
+<tr>
+<td>pm2_5</td>
+<td><code>PM2.5</code>/细颗粒物</td>
+</tr>
+<tr>
+<td>pm10</td>
+<td><code>PM10</code>/可吸入颗粒物</td>
+</tr>
+<tr>
+<td>co</td>
+<td><code>CO</code>/一氧化碳</td>
+</tr>
+<tr>
+<td>no2</td>
+<td><code>NO2</code>/二氧化氮</td>
+</tr>
+<tr>
+<td>o3</td>
+<td><code>O3</code>/臭氧1小时平均</td>
+</tr>
+<tr>
+<td>o3_8h</td>
+<td><code>O3</code>/臭氧8小时平均</td>
+</tr>
+<tr>
+<td>so2</td>
+<td><code>SO2</code>/二氧化硫</td>
 </tr>
 </tbody></table>
 <h1 id='2c069ede80'>全球电话运营商归属地查询☎️</h1>
@@ -689,22 +578,6 @@
 <tr>
 <td><code>country</code></td>
 <td><code>可选</code>，<code>字符串</code>，国家码，默认为<code>CN</code>中国🇨🇳</td>
-</tr>
-</tbody></table>
-<h3 id='9ea07c6cb3-2'>状态码说明</h3>
-<table><thead>
-<tr>
-<th>status</th>
-<th>说明</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>ok</code></td>
-<td>查找成功</td>
-</tr>
-<tr>
-<td><code>error</code></td>
-<td>失败，此时<code>message</code>保存错误信息</td>
 </tr>
 </tbody></table>
 

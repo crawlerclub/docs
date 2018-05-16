@@ -403,3 +403,130 @@ gender|性别
 province|省
 city|市
 county|县
+
+# 网页正文抽取📑
+
+对文章类网页抽取正文、标题、发布时间、正文图片、作者、语种、地区、关键词等信息，支持全球各语种网站。
+
+> 代码示例：
+
+```python
+import sdk
+
+api = sdk.client('YOUR_ACCESS_KEY', 'YOUR_SECRET_KEY')
+data = {"url": "https://news.qq.com/a/20180517/001214.htm"}
+url = "https://api.crawler.club/htmlextract"
+response = api.request(url, data)
+print(response)
+```
+
+```java
+import java.util.HashMap;
+import java.util.Map;
+import club.crawler.Client;
+
+public class MainClass {
+    public static void main(String[] args) {
+        Client api = new Client("YOUR_ACCESS_KEY", "YOUR_SECRET_KEY");
+        Map<String, String> data = new HashMap<>();
+        data.put("url", "https://news.qq.com/a/20180517/001214.htm");
+        String url = "https://api.crawler.club/htmlextract";
+        String response = client.request(url, data);
+        System.out.println(response);
+    }
+}
+```
+
+```go
+package main
+
+import (
+    "fmt"
+    "github.com/crawlerclub/gosdk"
+)
+
+func main() {
+    api := gosdk.NewClient("YOUR_ACCESS_KEY", "YOUR_SECRET_KEY")
+    data := map[string]string{
+        "url":  "https://news.qq.com/a/20180517/001214.htm",
+    }
+    url := "https://api.crawler.club/htmlextract"
+    response, _ := api.Request(url, data)
+    fmt.Println(response)
+}
+```
+
+> 正确返回数据应答样例
+
+```json
+{
+  "status":"ok",
+  "message":{
+    "url":"https://news.qq.com/a/20180517/001214.htm",
+    "from":"qq.com",
+    "site_info":{
+      "Flag":1,
+      "Sub":"news",
+      "Root":"qq",
+      "Tld":"com"
+    },
+    "canonical_url":"",
+    "title":"国家重点研发计划立项密集发布 16专项经费51亿元",
+    "text":"资料图：图为世界上首颗量子科学实验卫星“墨子号”模型。(资料图片)中新社记者 韩苏原 摄
+随着“高性能计算”、“增材制造与激光制造”等重点专项拟资助项目相继公示，2018年度国家重点研发计划立项工作拉开了大幕。《经济参考报》记者16日从科技部获悉，近期三个批次的项目清单密集发布，涉及高新技术和基础研究领域在内的16个专项237个项目，国拨经费共计51亿元，其中量子调控与量子信息、纳米技术和新能源汽车等领域成为未来科研经费重点投向。
+...",
+    "html":"<p><img src=\"http://inews.gtimg.com/newsapp_bt/0/3603873903/641\" /></p>
+<p>资料图：图为世界上首颗量子科学实验卫星“墨子号”模型。(资料图片)中新社记者 韩苏原 摄</p>
+<p>随着“高性能计算”、“增材制造与激光制造”等重点专项拟资助项目相继公示，2018年度国家重点研发计划立项工作拉开了大幕。《经济参考报》记者16日从科技部获悉，近期三个批次的项目清单密集发布，涉及高新技术和基础研究领域在内的16个专项237个项目，国拨经费共计51亿元，其中量子调控与量子信息、纳米技术和新能源汽车等领域成为未来科研经费重点投向。</p>
+...",
+    "language":"cmn",
+    "location":"CN",
+    "favicon":"https://mat1.gtimg.com/www/icon/favicon2.ico",
+    "images":[
+      "http://inews.gtimg.com/newsapp_bt/0/3603873903/641"
+    ],
+    "tags":"国家重点研发计划立项密集发布 16专项经费51亿元,新能源,科技部,高技术",
+    "author":"",
+    "publish_date":"2018-05-17T04:02:00+08:00"
+  }
+}
+```
+
+> 请求错误应答样例
+
+```json
+
+{
+  "status":"fail",
+  "message":"error infomation"
+}
+
+```
+
+### HTTP请求
+
+`POST https://api.crawler.club/htmlextract`
+
+### 请求参数
+
+参数 | 描述
+--------- | -------
+`url` | `字符串`，要进行正文抽取的网页URL
+
+### 状态码说明
+
+status | 说明
+--------- | -------
+`ok` | 查找成功
+`fail` | 失败，此时`message`保存错误信息
+
+### 正文信息说明
+
+字段 | 说明
+--- | ---
+url|网页URL
+title|文章标题
+text|文章正文
+html|文章正文，HTML版本
+publish_date|发布时间
+images|正文图片

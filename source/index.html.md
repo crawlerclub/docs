@@ -404,7 +404,7 @@ province|省
 city|市
 county|县
 
-# 网页正文抽取📑
+# 全语种网页正文抽取📑
 
 对文章类网页抽取正文、标题、发布时间、正文图片、作者、语种、地区、关键词等信息，支持全球各语种网站。
 
@@ -530,3 +530,7 @@ text|文章正文
 html|文章正文，HTML版本
 publish_date|发布时间
 images|正文图片
+language|网页语言
+location|国家，`ISO 3166-1 alpha-2 Country Codes`
+author|作者
+tags|关键词

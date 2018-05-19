@@ -299,7 +299,7 @@ location|归属地，*多语种*
 time_zones|时区
 carrier|运营商，*多语种*
 
-# 身份证信息查询🆔
+# 中国身份证信息查询🆔
 
 查询身份证的基本信息，包括发证地区、出生年月日和性别及有效性。
 
@@ -534,3 +534,5 @@ language|网页语言
 location|国家，`ISO 3166-1 alpha-2 Country Codes`
 author|作者
 tags|关键词
+
+# 全球银行卡校验与信息查询💳

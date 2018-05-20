@@ -536,3 +536,115 @@ author|作者
 tags|关键词
 
 # 全球银行卡校验与信息查询💳
+
+查询全球银行卡的基本信息，包括发卡银行名称、网址、银行卡类型及有效性。
+
+> 代码示例：
+
+```python
+import sdk
+
+api = sdk.client('YOUR_ACCESS_KEY', 'YOUR_SECRET_KEY')
+data = {"id": "6222000200124846494"}
+url = "https://api.crawler.club/bankcard"
+response = api.request(url, data)
+print(response)
+```
+
+```java
+import java.util.HashMap;
+import java.util.Map;
+import club.crawler.Client;
+
+public class MainClass {
+    public static void main(String[] args) {
+        Client api = new Client("YOUR_ACCESS_KEY", "YOUR_SECRET_KEY");
+        Map<String, String> data = new HashMap<>();
+        data.put("id", "6222000200124846494");
+        String url = "https://api.crawler.club/bankcard";
+        String response = client.request(url, data);
+        System.out.println(response);
+    }
+}
+```
+
+```go
+package main
+
+import (
+    "fmt"
+    "github.com/crawlerclub/gosdk"
+)
+
+func main() {
+    api := gosdk.NewClient("YOUR_ACCESS_KEY", "YOUR_SECRET_KEY")
+    data := map[string]string{
+        "id":  "6222000200124846494",
+    }
+    url := "https://api.crawler.club/bankcard"
+    response, _ := api.Request(url, data)
+    fmt.Println(response)
+}
+```
+
+> 正确返回数据应答样例
+
+```json
+
+{
+  "status":"ok",
+  "message":{
+    "name":"icbc",
+    "country":"cn",
+    "localTitle":"中国工商银行",
+    "engTitle":"Industrial and Commercial Bank of China",
+    "url":"http://www.icbc.com.cn",
+    "color":"#c90000",
+    "card_type":"dc",
+    "length":19,
+    "prefixes":0,
+    "number":"6222000200124846494",
+    "detail":"工商银行·灵通卡"
+  }
+}
+```
+
+> 请求错误应答样例
+
+```json
+{
+  "status":"fail",
+  "message":"invalid card number"
+}
+```
+
+### HTTP请求
+
+`POST https://api.crawler.club/bankcard`
+
+### 请求参数
+
+参数 | 描述
+--------- | -------
+`id` | `字符串`，要查询的银行卡号
+
+### 状态码说明
+
+status | 说明
+--------- | -------
+`ok` | 查找成功
+`fail` | 失败，此时`message`保存错误信息
+
+### 银行卡号信息说明
+
+字段 | 说明
+--- | ---
+number|银行卡号
+name|银行卡Code
+country|银行卡所属国家码
+localTitle|银行名字，本地语言
+engTitle|银行名字，英语
+url|银行网址
+color|银行颜色
+card_type|银行卡类型
+detail|银行卡详情

@@ -296,6 +296,20 @@
           </li>
           <li>
             <a href="#f612983089" class="toc-h1 toc-link" data-title="">全球银行卡校验与信息查询💳</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#http-5" class="toc-h2 toc-link" data-title="http">HTTP请求</a>
+                  </li>
+                  <li>
+                    <a href="#1f9ac54b15-5" class="toc-h2 toc-link" data-title="">请求参数</a>
+                  </li>
+                  <li>
+                    <a href="#9ea07c6cb3-5" class="toc-h2 toc-link" data-title="">状态码说明</a>
+                  </li>
+                  <li>
+                    <a href="#7f57c7a90e" class="toc-h2 toc-link" data-title="">银行卡号信息说明</a>
+                  </li>
+              </ul>
           </li>
       </div>
         <ul class="toc-footer">
@@ -981,6 +995,152 @@
 </tr>
 </tbody></table>
 <h1 id='f612983089'>全球银行卡校验与信息查询💳</h1>
+<p>查询全球银行卡的基本信息，包括发卡银行名称、网址、银行卡类型及有效性。</p>
+
+<blockquote>
+<p>代码示例：</p>
+</blockquote>
+<pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">sdk</span>
+
+<span class="n">api</span> <span class="o">=</span> <span class="n">sdk</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s">'YOUR_ACCESS_KEY'</span><span class="p">,</span> <span class="s">'YOUR_SECRET_KEY'</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s">"id"</span><span class="p">:</span> <span class="s">"6222000200124846494"</span><span class="p">}</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.crawler.club/bankcard"</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</code></pre><pre class="highlight java tab-java"><code><span class="kn">import</span> <span class="nn">java.util.HashMap</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Map</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">club.crawler.Client</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainClass</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">Client</span> <span class="n">api</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Client</span><span class="o">(</span><span class="s">"YOUR_ACCESS_KEY"</span><span class="o">,</span> <span class="s">"YOUR_SECRET_KEY"</span><span class="o">);</span>
+        <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">data</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;();</span>
+        <span class="n">data</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"id"</span><span class="o">,</span> <span class="s">"6222000200124846494"</span><span class="o">);</span>
+        <span class="n">String</span> <span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.crawler.club/bankcard"</span><span class="o">;</span>
+        <span class="n">String</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="na">request</span><span class="o">(</span><span class="n">url</span><span class="o">,</span> <span class="n">data</span><span class="o">);</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">response</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre><pre class="highlight go tab-go"><code><span class="k">package</span><span class="x"> </span><span class="n">main</span><span class="x">
+
+</span><span class="k">import</span><span class="x"> </span><span class="p">(</span><span class="x">
+    </span><span class="s">"fmt"</span><span class="x">
+    </span><span class="s">"github.com/crawlerclub/gosdk"</span><span class="x">
+</span><span class="p">)</span><span class="x">
+
+</span><span class="k">func</span><span class="x"> </span><span class="n">main</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x">
+    </span><span class="n">api</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">gosdk</span><span class="o">.</span><span class="n">NewClient</span><span class="p">(</span><span class="s">"YOUR_ACCESS_KEY"</span><span class="p">,</span><span class="x"> </span><span class="s">"YOUR_SECRET_KEY"</span><span class="p">)</span><span class="x">
+    </span><span class="n">data</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="k">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">string</span><span class="p">{</span><span class="x">
+        </span><span class="s">"id"</span><span class="o">:</span><span class="x">  </span><span class="s">"6222000200124846494"</span><span class="p">,</span><span class="x">
+    </span><span class="p">}</span><span class="x">
+    </span><span class="n">url</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="s">"https://api.crawler.club/bankcard"</span><span class="x">
+    </span><span class="n">response</span><span class="p">,</span><span class="x"> </span><span class="n">_</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">api</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="x"> </span><span class="n">data</span><span class="p">)</span><span class="x">
+    </span><span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">response</span><span class="p">)</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre>
+<blockquote>
+<p>正确返回数据应答样例</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:{</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"icbc"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"country"</span><span class="p">:</span><span class="s2">"cn"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"localTitle"</span><span class="p">:</span><span class="s2">"中国工商银行"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"engTitle"</span><span class="p">:</span><span class="s2">"Industrial and Commercial Bank of China"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"url"</span><span class="p">:</span><span class="s2">"http://www.icbc.com.cn"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"color"</span><span class="p">:</span><span class="s2">"#c90000"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"card_type"</span><span class="p">:</span><span class="s2">"dc"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"length"</span><span class="p">:</span><span class="mi">19</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"prefixes"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"number"</span><span class="p">:</span><span class="s2">"6222000200124846494"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"detail"</span><span class="p">:</span><span class="s2">"工商银行·灵通卡"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>请求错误应答样例</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="s2">"fail"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="s2">"invalid card number"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-5'>HTTP请求</h3>
+<p><code>POST https://api.crawler.club/bankcard</code></p>
+<h3 id='1f9ac54b15-5'>请求参数</h3>
+<table><thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>id</code></td>
+<td><code>字符串</code>，要查询的银行卡号</td>
+</tr>
+</tbody></table>
+<h3 id='9ea07c6cb3-5'>状态码说明</h3>
+<table><thead>
+<tr>
+<th>status</th>
+<th>说明</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>ok</code></td>
+<td>查找成功</td>
+</tr>
+<tr>
+<td><code>fail</code></td>
+<td>失败，此时<code>message</code>保存错误信息</td>
+</tr>
+</tbody></table>
+<h3 id='7f57c7a90e'>银行卡号信息说明</h3>
+<table><thead>
+<tr>
+<th>字段</th>
+<th>说明</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>number</td>
+<td>银行卡号</td>
+</tr>
+<tr>
+<td>name</td>
+<td>银行卡Code</td>
+</tr>
+<tr>
+<td>country</td>
+<td>银行卡所属国家码</td>
+</tr>
+<tr>
+<td>localTitle</td>
+<td>银行名字，本地语言</td>
+</tr>
+<tr>
+<td>engTitle</td>
+<td>银行名字，英语</td>
+</tr>
+<tr>
+<td>url</td>
+<td>银行网址</td>
+</tr>
+<tr>
+<td>color</td>
+<td>银行颜色</td>
+</tr>
+<tr>
+<td>card_type</td>
+<td>银行卡类型</td>
+</tr>
+<tr>
+<td>detail</td>
+<td>银行卡详情</td>
+</tr>
+</tbody></table>
+
       </div>
       <div class="dark-box">
           <div class="lang-selector">

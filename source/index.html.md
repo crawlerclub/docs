@@ -15,7 +15,7 @@ search: true
 
 # 概述
 
-crawler.club提供如PM2.5数据查询、全球手机号码运营商归属地查询、交通信息查询等数据API接口以及提供如全语种网页文章正文抽取、文章关键词抽取、自然语言解析等基础技术API接口。
+crawler.club提供如PM2.5数据查询、全球手机号码运营商归属地查询、中国身份证信息查询、全球银行卡信息查询等数据API接口以及提供如全语种网页文章正文抽取、文章关键词抽取、自然语言解析等基础技术API接口。
 
 crawler.club服务后台需要通过使用Access Key / Secret Key加密的方法来验证某个请求的发送者身份。Access Key（AK）用于标示用户，Secret Key（SK）是用户用于加密认证字符串和crawler.club服务用来验证认证字符串的密钥，其中SK必须保密，只有用户和crawler.club知道。
 
@@ -66,7 +66,7 @@ package main
 
 import (
     "fmt"
-    "github.com/crawlerclub/gosdk"
+    "crawler.club/gosdk"
 )
 
 func main() {
@@ -216,7 +216,7 @@ package main
 
 import (
     "fmt"
-    "github.com/crawlerclub/gosdk"
+    "crawler.club/gosdk"
 )
 
 func main() {
@@ -337,7 +337,7 @@ package main
 
 import (
     "fmt"
-    "github.com/crawlerclub/gosdk"
+    "crawler.club/gosdk"
 )
 
 func main() {
@@ -442,7 +442,7 @@ package main
 
 import (
     "fmt"
-    "github.com/crawlerclub/gosdk"
+    "crawler.club/gosdk"
 )
 
 func main() {
@@ -573,7 +573,7 @@ package main
 
 import (
     "fmt"
-    "github.com/crawlerclub/gosdk"
+    "crawler.club/gosdk"
 )
 
 func main() {

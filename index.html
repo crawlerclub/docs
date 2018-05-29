@@ -351,7 +351,7 @@
 </code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
 <span class="k">require_once</span> <span class="s2">"crawlerclub/Client.php"</span><span class="p">;</span>
 
-<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">IziClient</span><span class="p">(</span><span class="s2">"YOUR_ACCESS_KEY"</span><span class="p">,</span> <span class="s2">"YOUR_SECRET_KEY"</span><span class="p">);</span>
+<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Client</span><span class="p">(</span><span class="s2">"YOUR_ACCESS_KEY"</span><span class="p">,</span> <span class="s2">"YOUR_SECRET_KEY"</span><span class="p">);</span>
 <span class="nv">$url</span> <span class="o">=</span> <span class="s2">"https://api.crawler.club/pm25"</span><span class="p">;</span>
 <span class="nv">$data</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s2">"city"</span><span class="o">=&gt;</span><span class="s2">"beijing"</span><span class="p">,</span> <span class="s2">"time"</span><span class="o">=&gt;</span><span class="s2">"2018051209"</span><span class="p">);</span>
 <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">request</span><span class="p">(</span><span class="nv">$url</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
@@ -568,7 +568,7 @@
 </code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
 <span class="k">require_once</span> <span class="s2">"crawlerclub/Client.php"</span><span class="p">;</span>
 
-<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">IziClient</span><span class="p">(</span><span class="s2">"YOUR_ACCESS_KEY"</span><span class="p">,</span> <span class="s2">"YOUR_SECRET_KEY"</span><span class="p">);</span>
+<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Client</span><span class="p">(</span><span class="s2">"YOUR_ACCESS_KEY"</span><span class="p">,</span> <span class="s2">"YOUR_SECRET_KEY"</span><span class="p">);</span>
 <span class="nv">$url</span> <span class="o">=</span> <span class="s2">"https://api.crawler.club/phone"</span><span class="p">;</span>
 <span class="nv">$data</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s2">"number"</span><span class="o">=&gt;</span><span class="s2">"13800138000"</span><span class="p">,</span> <span class="s2">"country"</span><span class="o">=&gt;</span><span class="s2">"CN"</span><span class="p">);</span>
 <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">request</span><span class="p">(</span><span class="nv">$url</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
@@ -733,7 +733,7 @@
 </code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
 <span class="k">require_once</span> <span class="s2">"crawlerclub/Client.php"</span><span class="p">;</span>
 
-<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">IziClient</span><span class="p">(</span><span class="s2">"YOUR_ACCESS_KEY"</span><span class="p">,</span> <span class="s2">"YOUR_SECRET_KEY"</span><span class="p">);</span>
+<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Client</span><span class="p">(</span><span class="s2">"YOUR_ACCESS_KEY"</span><span class="p">,</span> <span class="s2">"YOUR_SECRET_KEY"</span><span class="p">);</span>
 <span class="nv">$url</span> <span class="o">=</span> <span class="s2">"https://api.crawler.club/idcard"</span><span class="p">;</span>
 <span class="nv">$data</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s2">"id"</span><span class="o">=&gt;</span><span class="s2">"330825197801104539"</span><span class="p">);</span>
 <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">request</span><span class="p">(</span><span class="nv">$url</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
@@ -869,7 +869,7 @@
 </code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
 <span class="k">require_once</span> <span class="s2">"crawlerclub/Client.php"</span><span class="p">;</span>
 
-<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">IziClient</span><span class="p">(</span><span class="s2">"YOUR_ACCESS_KEY"</span><span class="p">,</span> <span class="s2">"YOUR_SECRET_KEY"</span><span class="p">);</span>
+<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Client</span><span class="p">(</span><span class="s2">"YOUR_ACCESS_KEY"</span><span class="p">,</span> <span class="s2">"YOUR_SECRET_KEY"</span><span class="p">);</span>
 <span class="nv">$url</span> <span class="o">=</span> <span class="s2">"https://api.crawler.club/htmlextract"</span><span class="p">;</span>
 <span class="nv">$data</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s2">"url"</span><span class="o">=&gt;</span><span class="s2">"https://news.qq.com/a/20180517/001214.htm"</span><span class="p">);</span>
 <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">request</span><span class="p">(</span><span class="nv">$url</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
@@ -1043,7 +1043,7 @@
 </code></pre><pre class="highlight php tab-php"><code><span class="cp">&lt;?php</span>
 <span class="k">require_once</span> <span class="s2">"crawlerclub/Client.php"</span><span class="p">;</span>
 
-<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">IziClient</span><span class="p">(</span><span class="s2">"YOUR_ACCESS_KEY"</span><span class="p">,</span> <span class="s2">"YOUR_SECRET_KEY"</span><span class="p">);</span>
+<span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Client</span><span class="p">(</span><span class="s2">"YOUR_ACCESS_KEY"</span><span class="p">,</span> <span class="s2">"YOUR_SECRET_KEY"</span><span class="p">);</span>
 <span class="nv">$url</span> <span class="o">=</span> <span class="s2">"https://api.crawler.club/bankcard"</span><span class="p">;</span>
 <span class="nv">$data</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s2">"id"</span><span class="o">=&gt;</span><span class="s2">"6222000200124846494"</span><span class="p">);</span>
 <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">request</span><span class="p">(</span><span class="nv">$url</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>

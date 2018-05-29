@@ -48,7 +48,7 @@ print(response)
 <?php
 require_once "crawlerclub/Client.php";
 
-$client = new IziClient("YOUR_ACCESS_KEY", "YOUR_SECRET_KEY");
+$client = new Client("YOUR_ACCESS_KEY", "YOUR_SECRET_KEY");
 $url = "https://api.crawler.club/pm25";
 $data = array("city"=>"beijing", "time"=>"2018051209");
 $response = $client->request($url, $data);
@@ -209,7 +209,7 @@ print(response)
 <?php
 require_once "crawlerclub/Client.php";
 
-$client = new IziClient("YOUR_ACCESS_KEY", "YOUR_SECRET_KEY");
+$client = new Client("YOUR_ACCESS_KEY", "YOUR_SECRET_KEY");
 $url = "https://api.crawler.club/phone";
 $data = array("number"=>"13800138000", "country"=>"CN");
 $response = $client->request($url, $data);
@@ -342,7 +342,7 @@ print(response)
 <?php
 require_once "crawlerclub/Client.php";
 
-$client = new IziClient("YOUR_ACCESS_KEY", "YOUR_SECRET_KEY");
+$client = new Client("YOUR_ACCESS_KEY", "YOUR_SECRET_KEY");
 $url = "https://api.crawler.club/idcard";
 $data = array("id"=>"330825197801104539");
 $response = $client->request($url, $data);
@@ -458,7 +458,7 @@ print(response)
 <?php
 require_once "crawlerclub/Client.php";
 
-$client = new IziClient("YOUR_ACCESS_KEY", "YOUR_SECRET_KEY");
+$client = new Client("YOUR_ACCESS_KEY", "YOUR_SECRET_KEY");
 $url = "https://api.crawler.club/htmlextract";
 $data = array("url"=>"https://news.qq.com/a/20180517/001214.htm");
 $response = $client->request($url, $data);
@@ -600,7 +600,7 @@ print(response)
 <?php
 require_once "crawlerclub/Client.php";
 
-$client = new IziClient("YOUR_ACCESS_KEY", "YOUR_SECRET_KEY");
+$client = new Client("YOUR_ACCESS_KEY", "YOUR_SECRET_KEY");
 $url = "https://api.crawler.club/bankcard";
 $data = array("id"=>"6222000200124846494");
 $response = $client->request($url, $data);
